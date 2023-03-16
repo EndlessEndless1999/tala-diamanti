@@ -1,0 +1,152 @@
+:root {
+    font-size: 16px;
+    --text_primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+}
+
+html {
+    font-family: 'Sofia Sans', sans-serif;
+    scroll-behavior: smooth;
+    padding: 0%;
+}
+
+body {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: grid;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: purple;
+}
+
+main {
+    clear: both;
+    height: 2500px;
+    width: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'hero hero hero hero'
+    'overview overview overview overview'
+    'gallery gallery gallery gallery'
+    'amenities amenities amenities amenities'
+    'footer footer footer footer'
+    ;
+}
+
+h1 {
+    padding: 0%;
+}
+
+/* ADD A LOGO OF CYPRUS WITH A PIN WHERE TALA IS IN TOP RIGHT */
+
+.navbar {
+    display: none;
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    background-color: wheat;
+}
+
+.heroContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'space space space space'
+    'title title title title'
+    'sub sub sub sub'
+    'button button button button'
+    ;
+    grid-area: hero;
+    background-image: url(/img/WhatsApp\ Image\ 2023-01-20\ at\ 22.03.23\ \(6\).jpeg);
+    background-size: 100%;
+    height: 870px;
+}
+
+.title {
+    text-align: center;
+    grid-area: title;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.subTitle {
+    position: relative;
+    bottom: 100px;
+    text-align: center;
+    grid-area: sub;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.inquireButton {
+    position: relative;
+    left: 42%;
+    bottom: 80%;
+    align-self: center;
+    grid-area: button;
+    height: 45px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: large;
+    transition: box-shadow 0.3s ease;
+    transition-property: background-color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(143, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 255, 0.5);
+}
+
+.inquireButton:hover {
+    background-color: rgb(19, 224, 255);
+    color: white;
+}
+
+.overviewContainer {
+    grid-area: overview;
+    height: 100%;
+    width: 100%
+}
+
+.galleryContainer {
+    grid-area: gallery;
+    height: 100%;
+    width: 100%
+}
+
+.carousel {
+
+}
+
+.carouselUl {
+    list-style-type: none;
+}
+
+.amenitiesContainer {
+    grid-area: amenities;
+    height: 100%;
+    width: 100%
+}
+
+.footerContainer {
+    grid-area: footer;
+    height: 100%;
+    width: 100%
+}
