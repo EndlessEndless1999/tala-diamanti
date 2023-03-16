@@ -10,6 +10,7 @@ html {
     font-family: 'Sofia Sans', sans-serif;
     scroll-behavior: smooth;
     padding: 0%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -132,7 +133,59 @@ h1 {
 }
 
 .carousel {
+    width: 100vh;
+    height: 100vh;
+    position: relative;
+}
 
+.slide {
+    inset: 0;
+    position: absolute;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+}
+
+.slide[data-active]{
+    opacity: 1;
+    transition-delay: 0ms;
+}
+
+.slide > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carouselButton {
+    top: 50%;
+    color: white;
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, .1);
+    padding: 0 .5rem;
+}
+
+.carouselButton:hover,
+.carouselButton:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.carouselButton:focus {
+    outline: 1px solid black;
+}
+
+.carouselButton.prev {
+    left: 1rem;
+}
+
+.carouselButton.next {
+    right: 1rem;
 }
 
 .carouselUl {

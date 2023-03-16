@@ -33,17 +33,17 @@
         </div> 
         <div class="galleryContainer">
             <section aria-label="Newest Photos">
-                <div class="carousel">
-                    <button class="carousel-button prev">&#8592;</button>
-                    <button class="carousel-button next">&#8594;</button>
-                    <ul class="carouselUl">
-                        <li>
+                <div class="carousel" data-carousel>
+                    <button class="carouselButton prev" data-carousel-button="prev">&#8592;</button>
+                    <button class="carouselButton next" data-carousel-button="next">&#8594;</button>
+                    <ul class="carouselUl" data-slides>
+                        <li class="slide" data-active>
                             <img src="/img/WhatsApp Image 2023-01-20 at 22.03.22 (1).jpeg" alt="ADD DESCRIPTIONS">
                         </li>
-                        <li>
+                        <li class="slide">
                             <img src="/img/WhatsApp Image 2023-01-20 at 22.03.23 (5).jpeg" alt="ADD DESCRIPTIONS">
                         </li>
-                        <li>
+                        <li class="slide">
                             <img src="/img/WhatsApp Image 2023-01-20 at 22.03.24 (2).jpeg" alt="ADD DESCRIPTIONS">
                         </li>
                     </ul>
@@ -64,6 +64,6 @@
 
 
     
-
-</body>
+    <script src="/js/script.js"></script>
+</body> 
 </html>
