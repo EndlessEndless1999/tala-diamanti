@@ -259,13 +259,14 @@ h1 {
     position: relative;
     top: 20%;
     grid-area: amenities;
-    height: 20%;
+    height: 30%;
     width: 100%;
     display: grid;
     grid-template-columns: 15% 35% 35% 15%;
-    grid-template-rows: 100%;
+    grid-template-rows: 50% 50%;
     grid-template-areas: 
     '. Amentext Aimg ..'
+    '. button button ..'
     ;
 }
 
@@ -313,8 +314,14 @@ h1 {
     left: 20%;
 }
 
+.buttonBox {
+    grid-area: button;
+    position: relative;
+    top: 60%;
+}
+
 .footerContainer {
     grid-area: footer;
-    height: 100%;
+    height: 0%;
     width: 100%
 }
