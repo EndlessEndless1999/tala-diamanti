@@ -190,7 +190,7 @@ h1 {
 
 .galleryContainer {
     grid-area: gallery;
-    height: 100%;
+    height: 20%;
     width: 100%
 }
 
@@ -198,7 +198,7 @@ h1 {
     width: 100vh;
     height: 100vh;
     position: relative;
-    left: 25%;
+    left: 22%;
 }
 
 .slide {
@@ -256,9 +256,61 @@ h1 {
 }
 
 .amenitiesContainer {
+    position: relative;
+    top: 20%;
     grid-area: amenities;
-    height: 100%;
-    width: 100%
+    height: 20%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15% 35% 35% 15%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    '. Amentext Aimg ..'
+    ;
+}
+
+.amenWord {
+    grid-area: Amentext;
+}
+
+.amenTitle {
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.amenFloor {
+    position: relative;
+    top: 10%;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.amenFloor2 {
+    font-weight: 400;
+    font-size: 20px;
+    position: relative;
+    top: 20%;
+}
+
+.amenFloorP {
+    font-weight: 1;
+    font-size: 17px;
+    position: relative;
+    top: 10%;
+}
+
+.amenFloorP2 {
+    font-weight: 1;
+    font-size: 17px;
+    position: relative;
+    top: 20%;
+}
+
+.amenitiesPic {
+    grid-area: Aimg;
+    max-width:  90%;
+    position: relative;
+    left: 20%;
 }
 
 .footerContainer {
