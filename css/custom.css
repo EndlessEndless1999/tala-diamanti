@@ -38,7 +38,7 @@ main {
     height: 2500px;
     width: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 10% 1fr 1fr 1fr;
     grid-template-areas: 
     'hero hero hero hero'
     'overview overview overview overview'
@@ -55,11 +55,41 @@ h1 {
 /* ADD A LOGO OF CYPRUS WITH A PIN WHERE TALA IS IN TOP RIGHT */
 
 .navbar {
-    display: none;
     width: 100%;
     height: 5rem;
     position: fixed;
-    background-color: wheat;
+    background-color: rgb(240, 232, 232);
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.49);
+    z-index: 3;
+}
+
+.navbar-nav {
+    position: relative;
+    top: 28%;
+    left: 9%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item {
+    font-size: larger;
+    margin-left: 10%;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #23232e;
+}
+
+.nav-item:last-child {
+    margin-left: auto;
+    position: relative;
+    right: 10%;
 }
 
 .heroContainer {
@@ -83,7 +113,8 @@ h1 {
     grid-area: title;
     color: white;
     font-size: 60px;
-    font-weight: bold;
+    font-weight: 1;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .subTitle {
@@ -93,7 +124,7 @@ h1 {
     grid-area: sub;
     color: white;
     font-size: 45px;
-    font-weight: bold;
+    font-weight: 1;
 }
 
 .inquireButton {
@@ -110,7 +141,7 @@ h1 {
     font-family: 'Sofia Sans', sans-serif;
     font-size: large;
     transition: box-shadow 0.3s ease;
-    transition-property: background-color 0.3s ease;
+    transition-property: background-color 2s ease;
     cursor: pointer;
     box-shadow: 0 0 0 0 rgba(143, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 255, 0.5);
 }
@@ -122,8 +153,39 @@ h1 {
 
 .overviewContainer {
     grid-area: overview;
-    height: 100%;
-    width: 100%
+    height: 20%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+    '. title subtitle .'
+    '. . paragraph .'
+    ;
+}
+
+.overTitle {
+    position: relative;
+    top: 20%;
+    grid-area: title;
+    font-size: 50px;
+}
+
+.overSub {
+    position: relative;
+    top: 24%;
+    grid-area: subtitle;
+    font-size: 35px;
+    text-decoration: solid;
+    font-weight: 1;
+}
+
+.overParagraph {
+    grid-area: paragraph;
+    position: relative;
+    top: 24%;
+    font-size: 20px;
+    font-weight: 1;
 }
 
 .galleryContainer {
@@ -136,6 +198,7 @@ h1 {
     width: 100vh;
     height: 100vh;
     position: relative;
+    left: 25%;
 }
 
 .slide {
